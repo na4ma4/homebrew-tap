@@ -8,13 +8,18 @@ class Rsc < Formula
   version "0.5.6"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_darwin_amd64.tar.gz"
-    sha256 "62639b7dc5ed9d1e0a6d37a14dd1d9c6039683d3c7e2cd5b27346d8d73d51078"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_darwin_amd64.tar.gz"
+      sha256 "7fe0808887ff139687df93a594ffdf7e3b201e3aaf544a0247a45bc483bb3df9"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_linux_amd64.tar.gz"
-    sha256 "fa50aabe06e6ec6d08351a63c0e4c2fc41c460ac58ac49e8cf566c25cd168d57"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_linux_amd64.tar.gz"
+      sha256 "5f2b90af040ace6d229d871a9ed44582d8fa4ac7b868006c97f298e0bf1226c2"
+    end
   end
 
   def install
