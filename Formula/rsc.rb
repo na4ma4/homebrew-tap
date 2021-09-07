@@ -5,20 +5,32 @@
 class Rsc < Formula
   desc "Remote service check agent (client)"
   homepage "https://github.com/na4ma4/rsca"
-  version "0.5.6"
+  version "0.5.7"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_darwin_amd64.tar.gz"
-      sha256 "7fe0808887ff139687df93a594ffdf7e3b201e3aaf544a0247a45bc483bb3df9"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.7/rsca_0.5.7_darwin_amd64.tar.gz"
+      sha256 "826c5deb6a598aafc4abb62f6e76828a7687c2e04d3992e90c8c043c8db760c1"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.7/rsca_0.5.7_darwin_arm64.tar.gz"
+      sha256 "70fe189d24b3bf5514a5dfd04891588a66f6ee7125af9b688262dfa66eeac0fb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.5.6/rsca_0.5.6_linux_amd64.tar.gz"
-      sha256 "5f2b90af040ace6d229d871a9ed44582d8fa4ac7b868006c97f298e0bf1226c2"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.7/rsca_0.5.7_linux_amd64.tar.gz"
+      sha256 "fae19c49c3a327d97201b0cfc6001eba904ebbb70eef4b2624fb0bf61575d402"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.7/rsca_0.5.7_linux_armv6.tar.gz"
+      sha256 "a2aa159b996ceb8210c85f4372fbefce834aace16e2f33f84a8288cf47ad7716"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/na4ma4/rsca/releases/download/v0.5.7/rsca_0.5.7_linux_arm64.tar.gz"
+      sha256 "82e237d10b70c2a7d95aeab0fb297607a791a770dce69184309d3d21cbdfaba5"
     end
   end
 
