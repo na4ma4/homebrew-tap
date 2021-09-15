@@ -5,32 +5,32 @@
 class Rsc < Formula
   desc "Remote service check agent (client)"
   homepage "https://github.com/na4ma4/rsca"
-  version "0.6.1"
+  version "0.6.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.6.1/rsca_0.6.1_darwin_amd64.tar.gz"
-      sha256 "203f256e9f2a04554b2db00fae629415be75174bc55d47ee931b7d43e5102db8"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.6.2/rsca_0.6.2_darwin_amd64.tar.gz"
+      sha256 "1e25fdb3d081aaf90886d9eb8fcfa6e80afe74ef5e7e597cab3600b7631dac31"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.6.1/rsca_0.6.1_darwin_arm64.tar.gz"
-      sha256 "f32782937fe9f8e63f9aa0f6e8df40a25c62748f1758c70cfbe320e3f86c2352"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.6.2/rsca_0.6.2_darwin_arm64.tar.gz"
+      sha256 "220b46f3faff5bc3049737635af49b44c5639451e354421f08fe4b2e47fc574d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.6.1/rsca_0.6.1_linux_amd64.tar.gz"
-      sha256 "aedbebbc94b534ad042df77774f6639d9ca5d6c75f8aebda9651afee643e8721"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.6.2/rsca_0.6.2_linux_amd64.tar.gz"
+      sha256 "61502d4274ec7508212e90b4f4ebfa311ff3171aacf21c81f2e96bdaff4ee48a"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.6.1/rsca_0.6.1_linux_armv6.tar.gz"
-      sha256 "828412315b0b752b240ee6ae6b3679b5cfa953163b66b622ab86971cbcd0f728"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.6.2/rsca_0.6.2_linux_armv6.tar.gz"
+      sha256 "4e8b80fe6c55f779d67441aecf5e52555b457e66217449aa3cb1aff0dff78f2d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/rsca/releases/download/v0.6.1/rsca_0.6.1_linux_arm64.tar.gz"
-      sha256 "9bc46b7fbdc7518b6b160700b83e04a27b52c31b014cfac9eee574fde14bcff4"
+      url "https://github.com/na4ma4/rsca/releases/download/v0.6.2/rsca_0.6.2_linux_arm64.tar.gz"
+      sha256 "48ad7a48aa173cfea96196ca37628bb0e65e08324713e783a7a680c52efff6d5"
     end
   end
 
