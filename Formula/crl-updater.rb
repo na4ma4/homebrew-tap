@@ -5,20 +5,20 @@
 class CrlUpdater < Formula
   desc "CRL local file update"
   homepage "https://github.com/na4ma4/crl-updater"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/crl-updater/releases/download/v0.1.0/crl-updater_0.1.0_darwin_amd64.tar.gz"
-      sha256 "efc77540f92d549a4fb1a92e31caae2f6cf21831c496bcadabcbcb2a92a52b26"
+      url "https://github.com/na4ma4/crl-updater/releases/download/v0.2.0/crl-updater_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ab523618df07e431bd8dd2b36f24d58f2b81cd5dadff77d88686d8e79805416b"
 
       def install
         bin.install "crl-updater"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/crl-updater/releases/download/v0.1.0/crl-updater_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ed5403b451c5ef8969e872d5485f6dbae80bc27e4833f1e4259256451816afcc"
+      url "https://github.com/na4ma4/crl-updater/releases/download/v0.2.0/crl-updater_0.2.0_darwin_arm64.tar.gz"
+      sha256 "3fea2fa059b9be07b61b5e33011581062a8dd31b15ee41da5ff64f6796fe75b7"
 
       def install
         bin.install "crl-updater"
@@ -27,25 +27,25 @@ class CrlUpdater < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/crl-updater/releases/download/v0.1.0/crl-updater_0.1.0_linux_arm64.tar.gz"
-      sha256 "fcc6cde44d6342f3221d04899aee198aa77463115fb2b6b0e92a4d87c3bf9603"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/na4ma4/crl-updater/releases/download/v0.2.0/crl-updater_0.2.0_linux_armv6.tar.gz"
+      sha256 "1586ef63c212cc389a5b79f2175db3c487ed4e1ae2a8c19b75b4f505c0a42e77"
 
       def install
         bin.install "crl-updater"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/crl-updater/releases/download/v0.1.0/crl-updater_0.1.0_linux_amd64.tar.gz"
-      sha256 "07d77acf24b8a5564f2877304547a58a01bb2d19db92ccc5d5805b5491500195"
+      url "https://github.com/na4ma4/crl-updater/releases/download/v0.2.0/crl-updater_0.2.0_linux_amd64.tar.gz"
+      sha256 "8d2d16bf08fff8d1814d65e19573b91ff4f3df4e9ccb989dd3066dbb630f39d7"
 
       def install
         bin.install "crl-updater"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/crl-updater/releases/download/v0.1.0/crl-updater_0.1.0_linux_armv6.tar.gz"
-      sha256 "14820b7bc7dcf3e8ce76275e25b827259e142e1ed277272719c94591a329815e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/na4ma4/crl-updater/releases/download/v0.2.0/crl-updater_0.2.0_linux_arm64.tar.gz"
+      sha256 "66a0981332b10cd8ab198a73cdb293cfba68b6e72bd2a482122ad5995e04414a"
 
       def install
         bin.install "crl-updater"
