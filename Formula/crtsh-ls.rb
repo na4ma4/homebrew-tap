@@ -5,20 +5,20 @@
 class CrtshLs < Formula
   desc "crt.sh list command line tool."
   homepage "https://github.com/na4ma4/crtsh-ls"
-  version "0.9.0"
+  version "0.9.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.0/crtsh-ls_0.9.0_darwin_arm64.tar.gz"
-      sha256 "69ef458b31acec0e6288d39c2ef45ae705fdd620a9a551b0a07300d4694cc7a6"
+    if Hardware::CPU.intel?
+      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.1/crtsh-ls_0.9.1_darwin_amd64.tar.gz"
+      sha256 "64e10d84c33a59243cc7994a99e38337b0101cd8e99e9e96dee55a29a574adb0"
 
       def install
         bin.install "crtsh-ls"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.0/crtsh-ls_0.9.0_darwin_amd64.tar.gz"
-      sha256 "423c1c3fb2e30935f00aacb87812c7675b5f6a5d043c1ff0a51b85b9e136faf1"
+    if Hardware::CPU.arm?
+      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.1/crtsh-ls_0.9.1_darwin_arm64.tar.gz"
+      sha256 "9add568f3988bac41dfafcb29b6e174982a3ebf69c2e8623209923603b05875c"
 
       def install
         bin.install "crtsh-ls"
@@ -27,25 +27,25 @@ class CrtshLs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.0/crtsh-ls_0.9.0_linux_arm64.tar.gz"
-      sha256 "18fc4e8b68e6720ccdf62c3efc3138bcb7d197aece7614945bc955f2a6704e75"
+    if Hardware::CPU.intel?
+      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.1/crtsh-ls_0.9.1_linux_amd64.tar.gz"
+      sha256 "e4e8afb23ab62933a3792b2e154bc339212154ef326acbc157f44fb39690c9d8"
 
       def install
         bin.install "crtsh-ls"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.0/crtsh-ls_0.9.0_linux_armv6.tar.gz"
-      sha256 "8a5bb52e99c66f99e633411cecf0eedb9d078260d4ad4d4a040642336ce9ba23"
+      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.1/crtsh-ls_0.9.1_linux_armv6.tar.gz"
+      sha256 "e170753bca1d3e7533ba9667acb97e1daa168e4246bc8576ec359934f4772333"
 
       def install
         bin.install "crtsh-ls"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.0/crtsh-ls_0.9.0_linux_amd64.tar.gz"
-      sha256 "c87c728e22b7cd739fb45b24c169c4c6b80716d7ba6b4b5d47b7aaa7104453d9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/na4ma4/crtsh-ls/releases/download/v0.9.1/crtsh-ls_0.9.1_linux_arm64.tar.gz"
+      sha256 "7139b8b64357ee7926cf48b3464ee419c1ff1dca09b92956d792657e6b020afd"
 
       def install
         bin.install "crtsh-ls"
