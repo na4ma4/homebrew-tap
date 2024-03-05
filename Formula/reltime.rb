@@ -5,20 +5,20 @@
 class Reltime < Formula
   desc "Relative time check tool"
   homepage "https://github.com/na4ma4/relative-time"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/relative-time/releases/download/v0.1.0/relative-time_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f92288cad43562ba6a316978ef4bcb5a397d43a50c9428b817c4a7fc732bd61f"
+      url "https://github.com/na4ma4/relative-time/releases/download/v0.2.0/relative-time_0.2.0_darwin_arm64.tar.gz"
+      sha256 "16674723d28bbd1cb68aa7d6ef6f6984921be8ce4dfdd8602d345f124ca95ad6"
 
       def install
         bin.install "reltime"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/relative-time/releases/download/v0.1.0/relative-time_0.1.0_darwin_amd64.tar.gz"
-      sha256 "f38a2687dd26eb87e44d6df7f3c515d359eff0a292c14d6c96938adc906d49e9"
+      url "https://github.com/na4ma4/relative-time/releases/download/v0.2.0/relative-time_0.2.0_darwin_amd64.tar.gz"
+      sha256 "f238d6fdbb34323a041680493179ea3965e48a94178526402510a035027d22cc"
 
       def install
         bin.install "reltime"
@@ -27,25 +27,25 @@ class Reltime < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/na4ma4/relative-time/releases/download/v0.2.0/relative-time_0.2.0_linux_amd64.tar.gz"
+      sha256 "09bacff2512a58096f5fbd271b5ef645663f584a7712b4034ab66e1d9b2eaba0"
+
+      def install
+        bin.install "reltime"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/relative-time/releases/download/v0.1.0/relative-time_0.1.0_linux_armv6.tar.gz"
-      sha256 "735e9c102ed4b0bfbf42459253e720460d679c41e83ddda4b2baf4b5be1d8833"
+      url "https://github.com/na4ma4/relative-time/releases/download/v0.2.0/relative-time_0.2.0_linux_armv6.tar.gz"
+      sha256 "479f65605db7883029be21ecaa581d96b6b2c3880406d0048f7225ba7016f4b9"
 
       def install
         bin.install "reltime"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/relative-time/releases/download/v0.1.0/relative-time_0.1.0_linux_arm64.tar.gz"
-      sha256 "e809592b4fd6cf45cea8e1917fd05724c912dd46ff4d62c24f5e45c2b5c92994"
-
-      def install
-        bin.install "reltime"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/relative-time/releases/download/v0.1.0/relative-time_0.1.0_linux_amd64.tar.gz"
-      sha256 "f4613197adc2c18ac65eeae4b12dd665f0809b6b0d78992924e4397380bc7c0b"
+      url "https://github.com/na4ma4/relative-time/releases/download/v0.2.0/relative-time_0.2.0_linux_arm64.tar.gz"
+      sha256 "75780e7822574e696088e2a6fe07c90846a2cf88b1545919df1bcc775e081163"
 
       def install
         bin.install "reltime"
