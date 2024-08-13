@@ -5,20 +5,20 @@
 class Ghtool < Formula
   desc "GitHub API Tool"
   homepage "https://github.com/na4ma4/ghtool"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/ghtool/releases/download/v0.2.0/ghtool_0.2.0_darwin_arm64.tar.gz"
-      sha256 "9b29bd5894e8857774ad2e6c5088abc0b0f8601f9c8e2a0670ee3c42e1c54102"
+    on_intel do
+      url "https://github.com/na4ma4/ghtool/releases/download/v0.3.0/ghtool_0.3.0_darwin_amd64.tar.gz"
+      sha256 "957cc25230f089b4ff950aa026385851e7c41c49a6ab2ef9e17e9efc69eab562"
 
       def install
         bin.install "ghtool"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/ghtool/releases/download/v0.2.0/ghtool_0.2.0_darwin_amd64.tar.gz"
-      sha256 "0fa1b6bbc1e3c003ce75f775207de27c8f6ff2a8e5f9157226b12e4238d15f2f"
+    on_arm do
+      url "https://github.com/na4ma4/ghtool/releases/download/v0.3.0/ghtool_0.3.0_darwin_arm64.tar.gz"
+      sha256 "0f9ad91896d904f422953d5e1c305e77e36c7619ffdf1fdb9411f10e5125f4bb"
 
       def install
         bin.install "ghtool"
@@ -27,28 +27,34 @@ class Ghtool < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/ghtool/releases/download/v0.2.0/ghtool_0.2.0_linux_arm64.tar.gz"
-      sha256 "95fb8e8007d66a7a033c7fe5a3454b8bd42241155f1fbe50ef5e48630de41d8c"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/na4ma4/ghtool/releases/download/v0.3.0/ghtool_0.3.0_linux_amd64.tar.gz"
+        sha256 "39685e9ad5d493f4894ec2f0b2515c5d9977e8d35c6919d4f86bf0fac4346e68"
 
-      def install
-        bin.install "ghtool"
+        def install
+          bin.install "ghtool"
+        end
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/ghtool/releases/download/v0.2.0/ghtool_0.2.0_linux_armv6.tar.gz"
-      sha256 "5e813b4173a08568b7acc9040322dde1b7771266352b6fe55bfb7a7b893f3fe1"
+    on_arm do
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/na4ma4/ghtool/releases/download/v0.3.0/ghtool_0.3.0_linux_armv6.tar.gz"
+        sha256 "a7ea185ea770de904b6604eb67f43f42f6d62f2c329cf0097fcb15d8cbf7b5f4"
 
-      def install
-        bin.install "ghtool"
+        def install
+          bin.install "ghtool"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/ghtool/releases/download/v0.2.0/ghtool_0.2.0_linux_amd64.tar.gz"
-      sha256 "c3eeccd744eb26edcd084bab0329d40bde81cb4bab50e13aff4b998d538b3801"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/na4ma4/ghtool/releases/download/v0.3.0/ghtool_0.3.0_linux_arm64.tar.gz"
+        sha256 "8150a6448fa73ec4758e697361562ad3fc10f7b568401637ce2893ee5fa51596"
 
-      def install
-        bin.install "ghtool"
+        def install
+          bin.install "ghtool"
+        end
       end
     end
   end
