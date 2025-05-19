@@ -5,20 +5,20 @@
 class Rsc < Formula
   desc "Remote service check agent (client)"
   homepage "https://github.com/na4ma4/rsca"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/na4ma4/rsca/releases/download/v1.0.0/rsca_1.0.0_darwin_amd64.tar.gz"
-      sha256 "c8356a1b6b465b8d6ff37ac6ef28742af322e3f4cb1d7310e86b7e932259a559"
+      url "https://github.com/na4ma4/rsca/releases/download/v1.0.1/rsca_1.0.1_darwin_amd64.tar.gz"
+      sha256 "489752a3e1597e46792ec303ce583ad3c73aa5b7796cb0ba73d1789921a4e8f0"
 
       def install
         bin.install "rsc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/na4ma4/rsca/releases/download/v1.0.0/rsca_1.0.0_darwin_arm64.tar.gz"
-      sha256 "e6659d3f0d28b7e21a44d4f743bdaf7ee445470a078542ea698d283b5ec65258"
+      url "https://github.com/na4ma4/rsca/releases/download/v1.0.1/rsca_1.0.1_darwin_arm64.tar.gz"
+      sha256 "fca4aa10adb531453df88d0f46718fc0674ceafc306deca31dbb46c7c2f14bf4"
 
       def install
         bin.install "rsc"
@@ -28,22 +28,22 @@ class Rsc < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/rsca/releases/download/v1.0.0/rsca_1.0.0_linux_amd64.tar.gz"
-      sha256 "e2baa47936902d6d9ebd939b72eaa3ee824c74257a4aae6616999776c69cee7f"
+      url "https://github.com/na4ma4/rsca/releases/download/v1.0.1/rsca_1.0.1_linux_amd64.tar.gz"
+      sha256 "cdd9189add4579c34fa3db38130679471f97b4181d97d5ed78fa172d6d190a1c"
       def install
         bin.install "rsc"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/rsca/releases/download/v1.0.0/rsca_1.0.0_linux_armv6.tar.gz"
-      sha256 "a930f3e9b19f1e3fed5c0a64a5c9373c6e65f12b8ca4ea6b451fbc5489c1d12f"
+      url "https://github.com/na4ma4/rsca/releases/download/v1.0.1/rsca_1.0.1_linux_armv6.tar.gz"
+      sha256 "bba51c3a5d47a3b0a425bd614bdd0924721295c19ef7aa7542abe664c59dfa35"
       def install
         bin.install "rsc"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/na4ma4/rsca/releases/download/v1.0.0/rsca_1.0.0_linux_arm64.tar.gz"
-      sha256 "44f52376ea9907e812bd12af776e19115081024ab170f94ffcaaca230ef82f18"
+      url "https://github.com/na4ma4/rsca/releases/download/v1.0.1/rsca_1.0.1_linux_arm64.tar.gz"
+      sha256 "809f23b533c0cb397013894d76d8b2c186050fe68c4cfaea6a421792bff56fdf"
       def install
         bin.install "rsc"
       end
