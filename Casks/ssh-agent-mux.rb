@@ -3,7 +3,7 @@ cask "ssh-agent-mux" do
   name "ssh-agent-mux"
   desc "SSH Agent Multiplexer"
   homepage "https://github.com/na4ma4/ssh-agent-mux"
-  version "0.2.1"
+  version "0.2.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,19 +13,19 @@ cask "ssh-agent-mux" do
 
   on_macos do
     on_arm do
-      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/#{version}/ssh-agent-mux_darwin_arm64.tar.gz"
-      sha256 "c469d5b8c0fdc2647d94e17da6c28942b3421455e8043dd33a43c056ac0006d9"
+      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/v#{version}/ssh-agent-mux_darwin_arm64.tar.gz"
+      sha256 "f5615b168bb2a6409229395cd254fe52eb9ddeee1eb5bba4496f596e80e86d2a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/#{version}/ssh-agent-mux_linux_amd64.tar.gz"
-      sha256 "5d90604c1e5dfe46aeda90ef664b72a6af0a9b5108c975fcc127c7c6ed636eb9"
+      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/v#{version}/ssh-agent-mux_linux_amd64.tar.gz"
+      sha256 "817307292d70f146c1aa1d1384824d9811134759a5d69976ef6178eb1b7cdf61"
     end
     on_arm do
-      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/#{version}/ssh-agent-mux_linux_arm64.tar.gz"
-      sha256 "1e7f62fb4ba84dc53ca1536efb1822a6ce658c235dff7c5026110347313a6fcd"
+      url "https://github.com/na4ma4/ssh-agent-mux/releases/download/v#{version}/ssh-agent-mux_linux_arm64.tar.gz"
+      sha256 "91520ac82540f9065ec0d042b721905f0a5485d7e31d2cc35ebfcab21e90c026"
     end
   end
 
