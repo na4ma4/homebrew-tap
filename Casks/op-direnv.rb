@@ -3,7 +3,7 @@ cask "op-direnv" do
   name "op-direnv"
   desc "1Password Direnv Tool is a command-line utility that integrates 1Password with direnv, allowing you to securely manage environment variables on a per-directory basis using 1Password items."
   homepage "https://github.com/na4ma4/1password-direnv-tool"
-  version "v1.0.2"
+  version "v1.0.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,7 +14,7 @@ cask "op-direnv" do
   on_macos do
     on_arm do
       url "https://github.com/na4ma4/1password-direnv-tool/releases/download/#{version}/op-direnv_darwin_arm64.tar.gz"
-      sha256 "c498c012b1b000dcca701676cb7a8c466e548c7fcc515c5076b54f990baec4cb"
+      sha256 "b50a76448646d59990c4b1f9dc77feaf6795765e7c33ec5b52b904be61b5aa6c"
     end
   end
 
