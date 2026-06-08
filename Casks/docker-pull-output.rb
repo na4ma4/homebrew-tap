@@ -3,7 +3,7 @@ cask "docker-pull-output" do
   name "docker-pull-output"
   desc "Docker Pull Output Parser"
   homepage "https://github.com/na4ma4/docker-pull-output"
-  version "1.0.0"
+  version "1.0.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,18 +14,18 @@ cask "docker-pull-output" do
   on_macos do
     on_arm do
       url "https://github.com/na4ma4/docker-pull-output/releases/download/v#{version}/docker-pull-output_darwin_arm64.tar.gz"
-      sha256 "5c632f68808821916b712e775d22328af9350eb4c34185d2247da57ec4398f33"
+      sha256 "d0ac4acd13b2837a4a78cdba6cc76954c17865cebbfa4612325fd3122e836950"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/na4ma4/docker-pull-output/releases/download/v#{version}/docker-pull-output_linux_amd64.tar.gz"
-      sha256 "885a161de24f8d8ec608fa5d56d90a1b02b238e8ab5070078b14e491ce0609e8"
+      sha256 "57284d38f55df8f2e619d9a7768e13f3b7bc2703fbd566153d65c36602a72523"
     end
     on_arm do
       url "https://github.com/na4ma4/docker-pull-output/releases/download/v#{version}/docker-pull-output_linux_arm64.tar.gz"
-      sha256 "40a425841d8b5b633738a1a8f6b7fc5e9e415e7702d73fd51acd4ac30427e43b"
+      sha256 "7eaa431badd49e2eb3036e99ef4d24d7f7b91c9f2e38fd09bd130d404ac720d4"
     end
   end
 
